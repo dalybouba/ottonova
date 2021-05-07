@@ -1,0 +1,34 @@
+
+
+
+
+.u-image-circle.u-image {
+    border-radius: 5% !important;
+}
+
+.u-overlap.u-overlap-transparent .u-header, .u-image, .u-gradient {
+    color: #111111;
+}
+
+.u-image, .u-background-effect-image, .u-video-poster {
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.u-sheet:not(.u-image):not(.u-video) > * {
+    pointer-events: auto;
+    pointer-events: initial;
+}
+.u-section-1 .u-shape-1 {
+    width: 179px;
+    height: 179px;
+    margin: 96px auto 0 143px;
+}
+
+.u-text-palette-4-base, a.u-button-style.u-text-palette-4-base, a.u-button-style.u-text-palette-4-base[class*="u-border-"] {
+    color: #2cccc4 !important;
+}
+

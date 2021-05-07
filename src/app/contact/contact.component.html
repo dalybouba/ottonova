@@ -1,0 +1,132 @@
+<section class="row container-fluid">
+    <div class="row">
+<!-- <div class="col-lg-6">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us
+        directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+</div> -->
+<!-- <div class="col-lg-6">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+</div> -->
+    </div>
+
+        <div class="row container-fluid">
+            <form [formGroup]="clientForm" class="form-signin  col-8 container-fluid">
+                <label for="name">Name</label>
+                <div class="form-label-group">
+                    <input type="text" id="name" class="form-control" formControlName="name" placeholder="name"
+                        required autofocus>
+                </div>
+                <div *ngIf="clientForm.controls['name'].invalid && 
+                                (clientForm.controls['name'].dirty || clientForm.controls['name'].touched)">
+                    <div *ngIf="clientForm.controls['name'].errors?.minlength" class="text-danger">
+                        name must have more than 3 characters !!
+                    </div>
+                    <div *ngIf="clientForm.controls['name'].errors?.required" class="text-danger">
+                        name name is required !!
+                    </div> 
+                </div>
+                <label for="Emailaddress">Email address</label>
+                <div class="form-label-group">
+                    <input type="email" id="Emailaddress" formControlName="email" class="form-control"
+                        placeholder="Email address" required>
+                </div>
+                
+                <div *ngIf="clientForm.controls['email'].invalid && 
+                            (clientForm.controls['email'].dirty || clientForm.controls['email'].touched)">
+                    <div *ngIf="clientForm.controls['email'].errors?.email" class="text-danger">
+                        must have a valide email !!
+                    </div>
+                    <div *ngIf="clientForm.controls['email'].errors?.required" class="text-danger">
+                        email name is required !!
+                    </div>
+    
+                </div>
+                <label for="inputPassword">Pick a date</label>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <select class="custom-select" class="form-control" formControlName="dateStart">
+                                <option selected>Start</option>
+                                <option *ngFor='let date of dateList'>{{date.start | date :'M/d/yy, h:mm a'}}</option>
+                            </select>
+                        </div>
+    
+                    </div>
+                    <div *ngIf="clientForm.controls['dateStart'].invalid && 
+                                (clientForm.controls['dateStart'].dirty || clientForm.controls['dateStart'].touched)">
+                        <div *ngIf="clientForm.controls['dateStart'].errors?.required" class="text-danger">
+                            Date is required !!
+                        </div>
+    
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <select class="custom-select" class="form-control" formControlName="dateEnd">
+                                <option selected>End</option>
+                                <option *ngFor='let date of dateList'>{{date.end | date :'M/d/yy, h:mm a'}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div *ngIf="clientForm.controls['dateEnd'].invalid && 
+                                (clientForm.controls['dateEnd'].dirty || clientForm.controls['dateEnd'].touched)">
+                        <div *ngIf="clientForm.controls['dateEnd'].errors?.required" class="text-danger">
+                            Date name is required !!
+                        </div>
+    
+                    </div>
+                </div>
+                <label for="inputPassword">Gender</label>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="radio mb-3">
+                            <label>
+                                <input type="radio"> male
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="radio mb-3">
+                            <label>
+                                <input type="radio"> femmel
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="radio mb-3">
+                            <label>
+                                <input type="radio"> other
+                            </label>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox"> permission to get contacted
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" [disabled]="clientForm.invalid" type="submit" (click)='createCustomer(clientForm.value)'>Validate</button>
+    
+            </form>
+            <!-- <div class="text-center col-lg-6 container">
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>San Francisco, CA 94126, USA</p>
+                    </li>
+    
+                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>+ 01 234 567 89</p>
+                    </li>
+    
+                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>contact@mdbootstrap.com</p>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+      
+       
+
+</section>
