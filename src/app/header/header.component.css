@@ -1,0 +1,43 @@
+p {
+  font-family: Lato;
+}
+
+.u-header .u-image-1 {
+  width: 639px;
+  height: 104px;
+  margin: 69px auto 0 0;
+}
+
+.u-header {
+  background-image: none;
+  min-height: 106px;
+}
+
+body, aside, .u-sidebar-block, section, header, footer {
+  position: relative;
+}
+
+
+@media (max-width: 767px){
+  .u-header .u-image-1 {
+    width: 540px;
+    height: 88px;
+}
+}
+@media (max-width: 1199px){
+.u-header .u-image-1 {
+    width: 639px;
+    height: 104px;
+}
+}
+@media (max-width: 767px){
+.u-header .u-image-1 {
+    width: 540px;
+    height: 88px;
+}}
+
+@media (max-width: 575px){
+.u-header .u-image-1 {
+    width: 340px;
+    height: 55px;
+}}
