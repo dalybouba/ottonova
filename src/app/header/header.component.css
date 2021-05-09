@@ -18,12 +18,7 @@ body, aside, .u-sidebar-block, section, header, footer {
 }
 
 
-@media (max-width: 767px){
-  .u-header .u-image-1 {
-    width: 540px;
-    height: 88px;
-}
-}
+
 @media (max-width: 1199px){
 .u-header .u-image-1 {
     width: 639px;
@@ -41,3 +36,20 @@ body, aside, .u-sidebar-block, section, header, footer {
     width: 340px;
     height: 55px;
 }}
+
+@media (min-width: 768px){
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 650px;
+    margin-top: 100px;
+}}
+@media (min-width: 575px) and  (max-width: 767px){
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 250px;
+    margin-top: 0px;
+}}
+
+.navbar-toggler{
+ color: black;
+}
